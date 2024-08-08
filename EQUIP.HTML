@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Зброя та інше обладнання</title>
+	<style type="text/css">
+		body{
+			background: black;
+			background-image: url("bg main.png");
+			color:white;
+			font-size: 16pt;
+			text-indent: 20px;
+			font-family: Lucida Console;
+			
+		}
+		p{
+			background: rgba(0,0,0,0.4);
+		}
+		
+		a{
+			color: black;
+			font-weight: bolder;
+			text-decoration: underline;
+			background: white;
+		}
+		a:visited{
+			font-weight: normal;
+			color: white;
+			background: black;
+		}
+		a:hover{
+			color:red;
+			filter:blur(1pt)
+		}
+		em{color:transparent;}
+		em:hover{
+			
+			font-weight: bolder;
+			text-decoration: underline;
+			//background: white;
+			filter:blur(0.5pt);
+			color:darkred;
+			text-shadow: black 0px 0px 10px;
+		}
+		
+	</style>
+</head>
+<body>
+	<p>
+БРОНЯ
+<em>Price=((TrashHold*2)/(Debuff)+TrashHold)*1gp</em><hr>
+<pre>Назва		Захист	Нзрчнст	Ціна	Додатково<hr>Важкий одяг	1	1	3gp
+Дешевий бронік	2 	2 	4gp
+Тактичний одяг	2	1	6gp
+Бойовий фурсьют	3 	4 	4.5gp 	Перевага на залякування,виступ
+Норм бронік	5 	5 	7gp
+Легкі Лати	5 	1 	15gp
+Важкий бронік	8	8	10gp
+Важкі лати	10	10	12gp
+Дорогий бронік	10	5 	14gp
+Дорогі лати	10	2 	20gp
+Сучасні лати	10	1 	30gp
+	</pre>
+	Захист -- кількість ушкодження що не доходить до користувача Броні з кожного джерела ушкодження<br>
+	Нзрчнсть -- віднімається від Спритності при носінні
+	Додатково -- еффект що працює на користувача броні 
+</p>
+<hr size="10px" color="gray"><br>
+<p>
+РОЗВАНТАЖКА
+<em>Price=((Slots)/(Debuff)+Slots/2)*1gp</em><br>
+<pre>Назва		Слоти	Нзрчнст	Ціна<hr>Ремінь		1	1	1.5gp
+БудПояс		2	1	3gp
+Дорогий Ремінь	2 	2 	2gp
+Дешева Тактична	3 	4 	2.25gp
+Парадна		5 	5 	3.5gp
+Тактична	5 	1 	7.5gp
+Спеціаліста	8	8	5gp
+Дорога Тактична	10	5 	7gp
+Кастомна	10	2 	10gp
+	</pre>
+	Слоти -- кількість кількість слотів під спорядження<br>
+	Нзрчнсть -- віднімається від Спритності при носінні
+	Додатково -- еффект що працює на користувача броні 
+</p>
+<hr size="10px" color="gray"><br>
+<p>
+Розрахунок кількості слотів на зброю
+<pre>Властивість	Модифікатор слотів<hr>Легка		*0.5
+Витончена	*0.5
+Важка		*2
+Досяжність	*2
+Дворучна	*2
+Універсальна	*2<br>
+Дайс	Модифікатор слотів<hr>d1	*0.25
+d4	*0.5
+d8,d10	*2
+d12	*3
+d20	*4
+</pre>
+	Щоб отримати кількість слотів що займає зброя перемножте 4 на усі модифікатори слотів Властивостей що є у зброї, а також на кожний модифікатор слотів за кожний відповідний дайс ушкодження
+</p><hr size="10px" color="gray"><br>
+<p>
+Вогнепальна Зброя<em>Price=((SumOf(DiceMods)+ShotsPerAction+ShotsPerLoad)/(Weight))*multiplicationOf(PropertyMods)*1gp</em><br>
+<pre>Властивість	Модифікатор слотів<hr>Легка		*0.5
+Витончена	*0.5
+Важка		*2
+Досяжність	*2
+Дворучна	*2
+Універсальна	*2<br>
+Дайс	Модифікатор слотів<hr>d1	*0.25
+d4	*0.5
+d8,d10	*2
+d12	*3
+d20	*4
+</pre>
+	Щоб отримати кількість слотів що займає зброя перемножте 4 на усі модифікатори слотів Властивостей що є у зброї, а також на кожний модифікатор слотів за кожний відповідний дайс ушкодження
+</p><hr size="10px" color="gray"><br>
+</body>
+</html>
+
